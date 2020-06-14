@@ -7,9 +7,15 @@ steps:
     env:
       ENV_NAME: "testing"
       
+  - wait
+  
   - trigger: "triggered-pipeline"
     name: "trigger downstream pipeline"
     build:
       env:
-        ENV_NAME: "${ENV_NAME}"
+        COMMIT_STRING : "${BUILDKITE_COMMIT}"
+      message: |
+        Triggered by: "${BUILDKITE_BUILD_URL}"
+        Branch: "${BUILDKITE_BRANCH}"
+        Created by: "${BUILDKITE_BUILD_CREATOR}"      
   
