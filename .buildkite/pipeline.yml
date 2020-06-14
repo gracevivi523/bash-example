@@ -6,3 +6,5 @@ steps:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
     env:
       ENV_NAME: "testing"
+      
+  - trigger: "triggered-pipeline"
