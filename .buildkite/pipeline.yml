@@ -8,3 +8,7 @@ steps:
       ENV_NAME: "testing"
       
   - trigger: "triggered-pipeline"
+    build:
+    env:
+      ENV_NAME: "${ENV_NAME}"
+  
