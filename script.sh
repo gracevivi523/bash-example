@@ -30,3 +30,6 @@ function inline_image {
 }
 
 inline_image 'artifact://artifacts/image.gif' 'Rainbows'
+
+echo "+++ : ENV_NAME"
+echo $ENV_NAME
